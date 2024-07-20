@@ -87,7 +87,7 @@ public class UserControllerTest {
     public void getExistingUser() throws Exception {
         mockMvc.perform(get("/users/" + USER_ONE_ID)).andExpect(status().isOk())
                 .andExpect(content().contentType(CONTENT_TYPE)).andExpect(jsonPath("$.id", Matchers.is(1)))
-                .andExpect(jsonPath("$.name", Matchers.is("Carlobmbs"))).andExpect(jsonPath("$.age", Matchers.is(29)))
+                .andExpect(jsonPath("$.name", Matchers.is("Carlos"))).andExpect(jsonPath("$.age", Matchers.is(29)))
                 .andExpect(jsonPath("$.email", Matchers.is("carlos@yopmail.com")));
     }
 
